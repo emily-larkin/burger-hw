@@ -1,16 +1,15 @@
 <div class="col-md-10 col-md-offset-1">
-  <h2 class="uneaten-title">Current Burgers</h2>
+  <h3 class="uneaten-title">Current Burgers</h3>
   <ul class="uneaten">
     {{#each burgers}}
       {{#unless this.devoured}}
         <li>
-          <img src="../assets/images/cuteburger.png" width="100px">
           <p>
             {{this.burger_name}}
           </p>
           <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="devoured" value="true">
-            <button type="submit" class="btn btn-default" style="background-color:red; color:yellow; padding: 15px">Chow Down!</button>
+            <button type="submit" class="btn btn-default" style="background-color: rgb(230, 173, 195); color:white; padding: 15px">Eat Burger</button>
           </form>
         </li>
       {{/unless}}
@@ -22,25 +21,24 @@
     <div class="col-md-4" id="update">
       <br><br><br>
         <form class="create-update-form" action="burgers/create" method="POST">
-          <h2 class="add-title">Add a Burger</h2>
+          <h3 class="add-title">Add a Burger</h3>
           <div class="form-group">
             <label for="newBurger">Burger Name:</label>
             <input type="hidden" name="devoured" value="0">
             <input type="text" id="newBurger" name="burger_name">
-          <button type="submit" class="btn btn-default" style="background-color:yellow; color:red">Add Burger</button>
+          <button type="submit" class="btn btn-default" style="background-color: rgb(230, 173, 195); color:white;">Add Burger</button>
         </form>
       </div>
     </div>
     <div class="col-md-4" id="eaten">
       <br><br><br>
-      <h2 class="eaten-title">Eaten Burgers</h2>
+      <h3 class="eaten-title">Eaten Burgers</h3>
       <ul class="burgers-eaten">
         {{#each burgers}}
           {{#if this.devoured}}
             <li>
               <p>
                 {{this.burger_name}}
-              <img src="../assets/images/hamburger-bitten.png" width="50px">
               </p>
             </li>
             <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">

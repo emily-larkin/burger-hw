@@ -1,19 +1,15 @@
 * {
     box-sizing: border-box;
-  
   }
-  
   
   #logo {
       width: 200px;
       height: 178px;
-      align-items: center;
-  
+      align-items: right;
       }
       body {
     width: 100%;
-    background-color: #fff;
-    background-image: url("http://www.seantindell.com/wp-content/uploads/2014/09/bg.jpg");
+    background-color: rgb(230, 173, 195);
     overflow: hidden;
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -29,7 +25,12 @@
   }
   
   .uneaten-title {
-    text-align: center;
+    text-align: left;
+    font-size: 25px;
+  }
+
+  .eaten-title {
+    font-size: 25px;
   }
   
   #pacman-title {
@@ -62,9 +63,13 @@
   .burgers-eaten {
     overflow-y: scroll;
   }
+
+  .add-title {
+    font-size: 25px;
+  }
   
   button {
-    background-color: #000;
-    color: yellow;
+    background-color: rgb(194, 124, 151);
+    color: white;
   }
   
